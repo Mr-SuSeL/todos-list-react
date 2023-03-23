@@ -1,0 +1,62 @@
+.section__heading__finishButton {
+    cursor: pointer;
+}
+
+.section__heading__hideButton {
+    cursor: pointer;
+}
+
+.section__heading__finishButton:disabled {
+    color: #dddddd;
+    cursor: default;
+}
+
+.section__heading__finishButton:disabled.section__heading__finishButton:hover {
+    color: #ddd;
+    cursor: default;
+
+}
+
+.button__task {
+    background-color: hsl(180, 100%, 25%);
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    transition: transform 1s;
+    transition-timing-function: cubic-bezier(0.75, 0.14, 0.59, 1.03);
+}
+
+.button__task:hover {
+    background-color: hsl(180, 100%, 40%);
+    transform: scale(1.15);
+
+}
+
+
+.buttonEmptyTasksTab {
+    display: none;
+}
+
+
+.section__heading__hideButton {
+    background: none;
+    border: none;
+    color: hsl(180, 98%, 26%);
+}
+
+.section__heading__hideButton:hover {
+    color: hsl(180, 50%, 50%);
+    transition: 1s;
+}
+
+.section__heading__finishButton {
+    background: none;
+    border: none;
+    color: hsl(180, 98%, 26%);
+}
+
+.section__heading__finishButton:hover {
+    color: hsl(180, 50%, 50%);
+    transition: 1s;
+}
