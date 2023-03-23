@@ -1,0 +1,180 @@
+
+.js-newTask.flex__item {
+    flex-grow: 1;
+}
+
+.tasks {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: -20px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-top: 0;
+    list-style: none;
+    padding: 0px;
+    
+}
+
+.js-newTask.flex__item {
+    flex-grow: 1;
+}
+
+.list__item {
+    display: grid;
+    grid-template-columns: 70px 1fr 70px;
+    padding: 20px;
+    margin: 0 20px 20px 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.grid__item {
+    display: flex;
+    align-items: center;
+}
+
+
+.section__heading--second {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    padding: 20px;
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gridButtons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 1112px) {
+    .gridButtons {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 610px) {
+    .section__heading--second {
+        grid-template-columns: 1fr;
+    }
+
+    .section__heading__finishButton {
+        margin: 10px 0px;
+    }
+
+    .section__heading__hideButton {
+        margin: 10px 0px;
+    }
+
+}
+
+
+.list__item--done>.grid__item--center {
+    text-decoration: line-through;
+}
+
+
+.section__heading__finishButton {
+    cursor: pointer;
+}
+
+.section__heading__hideButton {
+    cursor: pointer;
+}
+
+.section__heading__finishButton:disabled {
+    color: #dddddd;
+    cursor: default;
+}
+
+.section__heading__finishButton:disabled.section__heading__finishButton:hover {
+    color: #ddd;
+    cursor: default;
+
+}
+
+
+.button__task {
+    background-color: hsl(180, 100%, 25%);
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    transition: transform 1s;
+    transition-timing-function: cubic-bezier(0.75, 0.14, 0.59, 1.03);
+}
+
+.button__task:hover {
+    background-color: hsl(180, 100%, 40%);
+    transform: scale(1.15);
+
+}
+
+
+.buttonEmptyTasksTab {
+    display: none;
+}
+
+.taskList--hidden {
+    display: none;
+}
+
+.section__heading__hideButton {
+    background: none;
+    border: none;
+    color: hsl(180, 98%, 26%);
+}
+
+.section__heading__hideButton:hover {
+    color: hsl(180, 50%, 50%);
+    transition: 1s;
+}
+
+.section__heading__finishButton {
+    background: none;
+    border: none;
+    color: hsl(180, 98%, 26%);
+}
+
+.section__heading__finishButton:hover {
+    color: hsl(180, 50%, 50%);
+    transition: 1s;
+}
+
+.grid__item--left {
+    justify-content: center;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background-color: hsl(122, 59%, 40%);
+}
+
+.grid__item--left:hover {
+    background-color: hsl(122, 59%, 50%);
+}
+
+.grid__item--right {
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 30px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background-color: hsl(0, 89%, 42%);
+}
+
+.grid__item--right:hover {
+    background-color: hsl(0, 89%, 52%);
+}
+
+.grid__item--center {
+    justify-content: left;
+    padding-left: 0;
+    padding-right: 0;
+    align-self: left;
+}
