@@ -1,5 +1,8 @@
 # Todo List in React
 
+## Repo: https://github.com/Mr-SuSeL/todos-list-react/
+
+## Demo: https://mr-susel.github.io/todos-list-react/
 ## Description
 That usefull little app can help you with note all of your tasks to do in this particular short period of time.
 You can edit tasks, sign it as checked or just delete and create new one.
