@@ -39,24 +39,24 @@
 }
 
 
-.section__heading__hideButton {
+.section__heading--hideButton {
     background: none;
     border: none;
     color: hsl(180, 98%, 26%);
 }
 
-.section__heading__hideButton:hover {
+.section__heading--hideButton:hover {
     color: hsl(180, 50%, 50%);
     transition: 1s;
 }
 
-.section__heading__finishButton {
+.section__heading--finishButton {
     background: none;
     border: none;
     color: hsl(180, 98%, 26%);
 }
 
-.section__heading__finishButton:hover {
+.section__heading--finishButton:hover {
     color: hsl(180, 50%, 50%);
     transition: 1s;
 }
