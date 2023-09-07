@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  background-color: #eee;
 }
 
 *, ::after, ::before {
@@ -8,6 +9,6 @@ html {
 }
 
 .body__container {
-  background: #eee;
+  /* background-color: #eee; */
   font-family: 'Montserrat', sans-serif;
 }

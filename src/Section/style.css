@@ -1,26 +1,20 @@
-.section__heading--second {
+.section__header {
     background-color: #fff;
     border: 2px solid #ddd;
-    padding: 20px;
-    padding-left: 30px;
+    padding: 10px 30px;
+    /* padding-left: 30px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 610px) {
-    .section__heading--second {
+    .section__header {
         grid-template-columns: 1fr;
     }
-    .section__heading__finishButton {
-        margin: 10px 0px;
-    }
-
-    .section__heading__hideButton {
-        margin: 10px 0px;
-    }
-
 }
 
-.list__item--done>.grid__item--center {
-    text-decoration: line-through;
+.section__title {
+    font-size: 25px;
+    margin: 10px;
 }

@@ -1,7 +1,5 @@
-
 .header__heading {
-    font-size: 27px;
-    padding: 20px 0 20px 20px;
-    border-bottom: 2px solid #ddd;
-
+    font-size: 47px;
+    padding: 20px 0 1px 1px;
+    /* border-bottom: 2px solid #ddd; */
 }

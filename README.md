@@ -3,22 +3,32 @@
 ## Repo: https://github.com/Mr-SuSeL/todos-list-react/
 
 ## Demo: https://mr-susel.github.io/todos-list-react/
+
 ## Description
+
 That usefull little app can help you with note all of your tasks to do in this particular short period of time.
 You can edit tasks, sign it as checked or just delete and create new one.
 CSS media querry helps view that app in clear estethic way also on mobile phone screen.
 
 ### Page features
+
 - ECMAScript +06 features
 - Flexbox and Grid modules
-- Simple design
+- Simple design - clean code
 - Source code based on function structure
-- Media querry 
-- React framework/library
+- Media querry (RWD)
+- React 18 framework/library
+- Module based architecture
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-## App screenshot 
-![Page Screenshot](img/img1.jpg)
+
+## App screenshot
+
+![Page Screenshot PC computer](img/img_pc.png)
+
+Responsive design - view from mobile phone:
+![Page Screenshot mobile phone](img/img1.jpg)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -30,11 +40,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 

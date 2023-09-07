@@ -1,62 +1,50 @@
-.section__heading__finishButton {
-    cursor: pointer;
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.section__heading__hideButton {
-    cursor: pointer;
+@media (max-width: 1112px) {
+    .buttons {
+        grid-template-columns: 1fr;
+    }
 }
 
-.section__heading__finishButton:disabled {
+.buttons__button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: hsl(180, 98%, 26%);
+}
+
+.buttons__button:hover {
+    color: hsl(180, 50%, 50%);
+    transition: 1s;
+}
+
+.buttons__button:disabled {
     color: #dddddd;
     cursor: default;
 }
 
-.section__heading__finishButton:disabled.section__heading__finishButton:hover {
+.buttons__button:disabled.buttons__button:hover {
     color: #ddd;
     cursor: default;
 
 }
 
-.button__task {
-    background-color: hsl(180, 100%, 25%);
-    color: white;
-    padding: 10px 15px;
-    cursor: pointer;
-    border: none;
-    transition: transform 1s;
-    transition-timing-function: cubic-bezier(0.75, 0.14, 0.59, 1.03);
-}
+@media (max-width: 610px) {
 
-.button__task:hover {
-    background-color: hsl(180, 100%, 40%);
-    transform: scale(1.15);
+    /* Tu trzeba to przenieść 
+    .section__heading--second {
+        grid-template-columns: 1fr;
+    }*/
 
-}
+    .section__heading__finishButton {
+        margin: 10px 0px;
+    }
 
+    .section__heading__hideButton {
+        margin: 10px 0px;
+    }
 
-.buttonEmptyTasksTab {
-    display: none;
-}
-
-
-.section__heading--hideButton {
-    background: none;
-    border: none;
-    color: hsl(180, 98%, 26%);
-}
-
-.section__heading--hideButton:hover {
-    color: hsl(180, 50%, 50%);
-    transition: 1s;
-}
-
-.section__heading--finishButton {
-    background: none;
-    border: none;
-    color: hsl(180, 98%, 26%);
-}
-
-.section__heading--finishButton:hover {
-    color: hsl(180, 50%, 50%);
-    transition: 1s;
 }

@@ -12,22 +12,26 @@
 @media (max-width: 767px) {
     .form {
         flex-wrap: wrap;
-
     }
 }
 
-.flex__item {
+.form__item {
     padding: 10px;
     margin: 10px;
     flex-shrink: 0;
 }
 
+
 @media (max-width: 767px) {
-    .flex__item {
+    .form__item {
         width: 100%;
     }
 }
 
+.form__input {
+    flex-grow: 1;
+    border: 2px solid #ddd;
+}
 
 .button__task {
     background-color: hsl(180, 100%, 25%);
@@ -42,7 +46,4 @@
 .button__task:hover {
     background-color: hsl(180, 100%, 40%);
     transform: scale(1.15);
-
 }
-
-

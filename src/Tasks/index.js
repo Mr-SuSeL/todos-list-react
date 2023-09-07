@@ -1,22 +1,25 @@
 import "./style.css";
 
 const Tasks = ({ tasks, hideDoneTasks }) => (
-
   <ul className="tasks">
-    {tasks.map(task => (
+    {tasks.map((task) => (
       <li
-      className={`
-      "list__item${task.done ? " list__item--done" : ""} list__item${task.done && hideDoneTasks ? " list__item--done taskList--hidden" : ""}
+        key={task.id}
+        className={`
+      "tasks__item${task.done ? " tasks__item--done" : ""} tasks__item${
+          task.done && hideDoneTasks
+            ? " tasks__item--done tasks__item--hidden"
+            : ""
+        }
       `}
       >
-      <button className = "js-done grid__item grid__item--left">
-        {task.done ? "✔" : ""}
-      </button>
-      <div className="js-text grid__item grid__item--center">
-        {task.content}
+        <button className="content__item content__item--left">
+          {task.done ? "✔" : ""}
+        </button>
+        <div className="content__item content__item--center">
+          {task.content}
         </div>
-      <button className = "js-remove grid__item grid__item--right">🗑</button>
-
+        <button className="content__item content__item--right">🗑</button>
       </li>
     ))}
   </ul>
