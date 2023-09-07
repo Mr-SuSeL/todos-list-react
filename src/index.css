@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
 }
 
@@ -9,7 +8,6 @@ html {
 }
 
 .body__container {
-  background-color: #eee;
-  max-width: 80%;
-  margin: 0 auto;
+  background: #eee;
+  font-family: 'Montserrat', sans-serif;
 }
