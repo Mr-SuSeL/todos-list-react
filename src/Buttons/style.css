@@ -29,16 +29,9 @@
 .buttons__button:disabled.buttons__button:hover {
     color: #ddd;
     cursor: default;
-
 }
 
 @media (max-width: 610px) {
-
-    /* Tu trzeba to przenieść 
-    .section__heading--second {
-        grid-template-columns: 1fr;
-    }*/
-
     .section__heading__finishButton {
         margin: 10px 0px;
     }

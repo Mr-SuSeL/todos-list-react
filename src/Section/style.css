@@ -2,7 +2,6 @@
     background-color: #fff;
     border: 2px solid #ddd;
     padding: 10px 30px;
-    /* padding-left: 30px; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 20px;

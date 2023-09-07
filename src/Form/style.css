@@ -21,7 +21,6 @@
     flex-shrink: 0;
 }
 
-
 @media (max-width: 767px) {
     .form__item {
         width: 100%;
