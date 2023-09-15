@@ -1,4 +1,4 @@
-.tasks {
+/* .tasks {
     background-color: #fff;
     padding: 20px;
     margin-top: -20px;
@@ -7,7 +7,7 @@
     border-top: 0;
     list-style: none;
     padding: 0px;
-}
+} */
 
 .tasks__item {
     display: grid;
