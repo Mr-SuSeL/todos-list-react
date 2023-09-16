@@ -34,27 +34,13 @@ export const Content = styled.span`
       text-decoration: line-through;
       display: flex;
       align-items: center;
-      /* margin-left: -10px; */
-
-      /* display: flex;
-        align-items: center;
-
-        justify-content: left;
-        padding-left: 0;
-        margin-left: -10px;
-
-        padding-right: 0;
-        align-self: left; */
     `}
 `;
 
 export const Button = styled.button`
   display: flex;
   align-items: center;
-  /* text-align: left; */
-  /* justify-content: center; */
   text-decoration: none;
-  /* margin-left: 30px; */
   width: 30px;
   height: 30px;
   color: white;
