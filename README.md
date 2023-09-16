@@ -14,10 +14,11 @@ CSS media querry helps view that app in clear estethic way also on mobile phone 
 
 - ECMAScript +06 features
 - Flexbox and Grid modules
+- Styled-Components
 - Simple design - clean code
 - Source code based on function structure
 - Media querry (RWD)
-- React 18 framework/library
+- React 18 framework/library with hooks
 - Module based architecture
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
