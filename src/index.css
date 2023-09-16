@@ -7,8 +7,3 @@ html {
 *, ::after, ::before {
   box-sizing: inherit;
 }
-
-.body__container {
-  /* background-color: #eee; */
-  font-family: 'Montserrat', sans-serif;
-}
