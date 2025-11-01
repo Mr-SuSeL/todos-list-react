@@ -3,16 +3,22 @@ import { createSlice } from '@reduxjs/toolkit';
 const tasksSlice = createSlice({
     name: 'tasks',
     initialState: {
-        tasks: [
-            {ide: 1,
-            content: "Testwo czy redux zarzuca stanem",
-            done: true,
-        },
-        ],
+        tasks: [],
+        hideDone: false,
     },
     reducers: {
         addTask: ({ tasks }, { payload }) => {
             tasks.push(payload); // immer library here allows us to mutate-like state directly
+        },
+        toggleHideDone: state => {
+            state.hideDone = !state.hideDone;
+        },
+        setAllDone: ({ tasks }) => {
+            tasks.forEach(task => { task.done = true; });
+        },
+        toggleTaskDone: ({ tasks }, { payload }) => {
+            const index = tasks.findIndex(task => task.id === payload);
+            tasks[index].done = !tasks[index].done;
         },
         removeTask: ({ tasks }, { payload }) => {
             return {
@@ -22,18 +28,7 @@ const tasksSlice = createSlice({
     },
 }); 
 
-export const { addTask, removeTask } = tasksSlice.actions;
+export const { addTask, removeTask, toggleHideDone, toggleTaskDone, setAllDone } = tasksSlice.actions;
 export default tasksSlice.reducer;
 export const selectTasks = state => state.tasks;
 
-// console.log(addTask({
-//     content: "Nauczys się Reduxa",
-//     done: false,
-//     id: 5
-// }));
-
-// console.log(tasksSlice.reducer({ tasks: [] }, addTask({
-//     content: "Nauczys się Reduxa",
-//     done: true,
-//     id: 5
-// })));
