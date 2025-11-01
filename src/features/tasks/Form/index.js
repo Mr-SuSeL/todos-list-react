@@ -21,7 +21,7 @@ const Form = ({ addNewTask }) => {
         ref={inputRef}
         value={newTaskContent}
         placeholder="Co jest do zrobienia?"
-        autofocus
+        autoFocus
         onChange={(event) => setNewTaskContent(event.target.value)}
       />
       <Button onClick={focusInput}>Dodaj zadanie</Button>
