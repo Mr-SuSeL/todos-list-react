@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.a719814f.css","mappings":"AAAA,KAGE,qBAAsB,CAFtB,qBAAsB,CACtB,cAEF,CAEA,iBACE,kBACF","sources":["index.css"],"sourcesContent":["html {\n  box-sizing: border-box;\n  font-size: 16px;\n  background-color: #eee;\n}\n\n*, ::after, ::before {\n  box-sizing: inherit;\n}\n"],"names":[],"sourceRoot":""}
