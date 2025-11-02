@@ -48,8 +48,8 @@ export const Button = styled.button`
   border: none;
   transition: background 0.3s;
 
-  ${({ toggleDone }) =>
-    toggleDone &&
+  ${({ $toggleDone }) =>
+    $toggleDone &&
     css`
       background-color: hsl(122, 59%, 40%);
 
@@ -57,13 +57,13 @@ export const Button = styled.button`
       align-items: center;
       justify-content: center;
 
-      &: hover {
+      &:hover {
         background-color: hsl(122, 59%, 50%);
       }
     `}
 
-  ${({ remove }) =>
-    remove &&
+  ${({ $remove }) =>
+    $remove &&
     css`
       background-color: hsl(0, 89%, 42%);
 
@@ -71,7 +71,7 @@ export const Button = styled.button`
       align-items: center;
       justify-content: center;
 
-      &: hover {
+      &:hover {
         background-color: hsl(0, 89%, 52%);
       }
     `}
