@@ -8,7 +8,7 @@ const tasksSlice = createSlice({
     },
     reducers: {
         addTask: ({ tasks }, { payload }) => {
-            tasks.push(payload); // immer library here allows us to mutate-like state directly
+            tasks.push(payload); 
         },
         toggleHideDone: state => {
             state.hideDone = !state.hideDone;
