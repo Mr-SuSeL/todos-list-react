@@ -5,5 +5,21 @@ export const saveTasksInLocalStorage = tasks => {
 }
 
 export const getTasksFromLocalStorage = () => {
-    return JSON.parse(localStorage.getItem(localStorageKey)) || []; 
-}   
+    const serializedState = localStorage.getItem(localStorageKey);
+
+    if (!serializedState) {
+        return [];
+    }
+
+    try {
+        const parsedState = JSON.parse(serializedState);
+
+        if (Array.isArray(parsedState)) {
+            return parsedState;
+        }
+
+    } catch (error) {
+        console.error("Błąd parsowania danych z localStorage:", error);
+    }
+    return []; 
+}
