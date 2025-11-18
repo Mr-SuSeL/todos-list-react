@@ -20,6 +20,7 @@ export const Item = styled.li`
   text-align: left;
   align-items: center;
 
+  /* Użycie standardowego propa 'hidden' jest bezpieczne, React go filtruje */
   ${(props) =>
     props.hidden &&
     css`
@@ -28,8 +29,9 @@ export const Item = styled.li`
 `;
 
 export const Content = styled.span`
-  ${({ done }) =>
-    done &&
+  /* 💡 POPRAWKA: Zmiana 'done' na '$done' */
+  ${({ $done }) =>
+    $done &&
     css`
       text-decoration: line-through;
       display: flex;

@@ -1,25 +1,32 @@
+
 const localStorageKey = "tasks";
 
-export const saveTasksInLocalStorage = tasks => {
-    localStorage.setItem(localStorageKey, JSON.stringify(tasks));
+export const saveTasksInLocalStorage = state => {
+
+    localStorage.setItem(localStorageKey, JSON.stringify(state));
 }
 
 export const getTasksFromLocalStorage = () => {
     const serializedState = localStorage.getItem(localStorageKey);
-
+    
     if (!serializedState) {
-        return [];
+        return undefined; 
     }
 
     try {
         const parsedState = JSON.parse(serializedState);
-
-        if (Array.isArray(parsedState)) {
-            return parsedState;
+        
+        if (
+            parsedState && 
+            typeof parsedState === 'object' && 
+            Array.isArray(parsedState.tasks)
+        ) {
+            return parsedState; 
         }
 
     } catch (error) {
         console.error("Błąd parsowania danych z localStorage:", error);
     }
-    return []; 
+    
+    return undefined; 
 }

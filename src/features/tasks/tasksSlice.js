@@ -1,31 +1,44 @@
+
 import { createSlice } from '@reduxjs/toolkit';
 import { getTasksFromLocalStorage } from './tasksLocalStorage';
 
+const defaultInitialState = {
+    tasks: [],
+    hideDone: false,
+    loading: false,
+};
+
+
+const savedState = getTasksFromLocalStorage();
+
 const tasksSlice = createSlice({
     name: 'tasks',
+
     initialState: {
-        tasks: getTasksFromLocalStorage(),
-        hideDone: false,
-        loading: false,
+        ...defaultInitialState,
+        ...(savedState), 
     },
+    
     reducers: {
-        addTask: ({ tasks }, { payload }) => {
-            tasks.push(payload); 
+
+        addTask: (state, { payload }) => {
+             state.tasks.push(payload); 
         },
         toggleHideDone: state => {
             state.hideDone = !state.hideDone;
         },
-        setAllDone: ({ tasks }) => {
-            tasks.forEach(task => { task.done = true; });
+
+        setAllDone: state => {
+            state.tasks.forEach(task => { task.done = true; });
         },
-        toggleTaskDone: ({ tasks }, { payload }) => {
-            const index = tasks.findIndex(task => task.id === payload);
-            tasks[index].done = !tasks[index].done;
+
+        toggleTaskDone: (state, { payload }) => {
+            const index = state.tasks.findIndex(task => task.id === payload);
+            state.tasks[index].done = !state.tasks[index].done;
         },
-        removeTask: ({ tasks }, { payload }) => {
-            return {
-                tasks: tasks.filter(task => task.id !== payload),
-            };
+        removeTask: (state, { payload }) => {
+
+            state.tasks = state.tasks.filter(task => task.id !== payload);
         },
         fetchExampleTasks: state => { 
             state.loading = true;
@@ -43,10 +56,11 @@ const tasksSlice = createSlice({
     },
 }); 
 
-export const { addTask, removeTask, toggleHideDone, 
-    toggleTaskDone, setAllDone, fetchExampleTasks, 
-    fetchExampleTasksSuccess, fetchExampleTasksError, 
-    setTasks } = tasksSlice.actions;
+export const { 
+    addTask, removeTask, toggleHideDone, toggleTaskDone, setAllDone, 
+    fetchExampleTasks, fetchExampleTasksSuccess, fetchExampleTasksError, setTasks 
+} = tasksSlice.actions;
+
 export default tasksSlice.reducer;
 export const selectTasks = state => state.tasks;
 export const selectLoading = state => state.tasks.loading;

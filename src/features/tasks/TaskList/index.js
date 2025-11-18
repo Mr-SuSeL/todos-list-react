@@ -3,12 +3,13 @@ import { List, Item, Content, Button } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
 
 const TaskList = () => {
+  // Destrukturyzacja { tasks: [...], hideDone: bool }
   const { tasks, hideDone } = useSelector(selectTasks);
   const dispatch = useDispatch();
 
   return (
     <List>
-      {tasks.map((task) => (
+      {Array.isArray(tasks) && tasks.map((task) => ( 
         <Item key={task.id} hidden={task.done && hideDone}>
           <Button 
             $toggleDone 
@@ -25,7 +26,6 @@ const TaskList = () => {
       ))}
     </List>
   )
-
 };
 
 export default TaskList;

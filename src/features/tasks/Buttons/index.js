@@ -7,7 +7,7 @@ const Buttons = () => {
   const { tasks, hideDone } = useSelector(selectTasks);
   const dispatch = useDispatch();
 
-  if (tasks.length === 0) {
+  if (!Array.isArray(tasks) || tasks.length === 0) {
     return null;
   }
 
@@ -19,10 +19,13 @@ const Buttons = () => {
       </Button>
       <Button
         onClick={() => dispatch(setAllDone())}
-        disabled={tasks.every(({ done }) => done)}>
+        // Ta linia jest teraz bezpieczna, ponieważ wiemy, że 'tasks' to tablica.
+        disabled={tasks.every(({ done }) => done)}
+      >
         Zakończ wszystkie zadania
       </Button>
     </BothButtons>
   );
 };
+
 export default Buttons;
