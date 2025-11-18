@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
 import { StyledForm, Input, Button } from "./styled";
 import { addTask } from "../tasksSlice";
+import ExampleButtons from "../ExampleButtons";
 
 const Form = () => {
   const inputRef = useRef(null);
@@ -31,16 +32,19 @@ const Form = () => {
   };
 
   return (
-    <StyledForm onSubmit={onFormSubmit}>
-      <Input
-        ref={inputRef}
-        value={newTaskContent}
-        placeholder="Co jest do zrobienia?"
-        autoFocus
-        onChange={(event) => setNewTaskContent(event.target.value)}
-      />
-      <Button onClick={focusInput}>Dodaj zadanie</Button>
-    </StyledForm>
+    <>
+      <ExampleButtons />
+      <StyledForm onSubmit={onFormSubmit}>
+        <Input
+          ref={inputRef}
+          value={newTaskContent}
+          placeholder="Co jest do zrobienia?"
+          autoFocus
+          onChange={(event) => setNewTaskContent(event.target.value)}
+        />
+        <Button onClick={focusInput}>Dodaj zadanie</Button>
+      </StyledForm>
+    </>
   );
 };
 
