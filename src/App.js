@@ -1,5 +1,5 @@
 import React from 'react';
-import Tasks from './features/tasks/Tasks';
+import Tasks from './features/tasks/TasksPage';
 import Author from './features/author/Author';
 // Zmieniono: Switch na Routes
 import { HashRouter, Link, Routes, Route, Navigate } from 'react-router-dom';
