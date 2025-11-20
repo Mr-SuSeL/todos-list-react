@@ -1,6 +1,7 @@
 import React from 'react';
-import Tasks from './features/tasks/TasksPage';
-import Author from './features/author/Author';
+import TasksPage from './features/tasks/TasksPage';
+import TaskPage from './features/tasks/TaskPage';
+import AuthorPage from './features/author/AuthorPage';
 // Zmieniono: Switch na Routes
 import { HashRouter, Link, Routes, Route, Navigate } from 'react-router-dom';
 
@@ -20,8 +21,9 @@ export default () => (
         </li>
       </ul>
       <Routes>
-        <Route path="/zadania" element={<Tasks />} />
-        <Route path="/autor" element={<Author />} />
+        <Route path="/zadania/:id" element={<TaskPage />} />
+        <Route path="/zadania" element={<TasksPage />} />
+        <Route path="/autor" element={<AuthorPage />} />
         <Route path="/" element={<Navigate to="/zadania" replace />} />
       </Routes>
     </nav>
