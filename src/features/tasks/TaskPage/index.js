@@ -14,8 +14,12 @@ function TaskPage() {
     <Container>
       <Header title="Szczegóły zadania" />
       <Section
-        title={id}
-        body={task.content}
+        title={task ? task.content : "Nie znaleziono zadania smuteczek."}
+        body={
+          <>
+            <strong>Ukończono:</strong> {task ? (task.done ? "Tak" : "Nie") : "Brak danych"}
+          </>
+        }
       />
     </Container>
   );
