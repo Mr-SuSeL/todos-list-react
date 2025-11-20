@@ -21,6 +21,8 @@ CSS media querry helps view that app in clear estethic way also on mobile phone 
 - React 18 framework/library with hooks
 - Module based architecture
 - Redux Toolkit for global state management
+- Redux - Saga
+- React Router
 
 This project uses [Redux Toolkit](https://redux-toolkit.js.org/) to manage global state efficiently. Redux enables predictable state updates by dispatching actions and handling state immutably. In this app, tasks and UI state (like hiding done tasks) are managed with Redux slices, making the app scalable and maintainable.
 
