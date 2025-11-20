@@ -3,21 +3,22 @@ import TasksPage from './features/tasks/TasksPage';
 import TaskPage from './features/tasks/TaskPage';
 import AuthorPage from './features/author/AuthorPage';
 // Zmieniono: Switch na Routes
-import { HashRouter, Link, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { StyledNavLink } from './styled';
 
 export default () => (
   <HashRouter>
     <nav>
       <ul>
         <li>
-          <Link to="/zadania">
+          <StyledNavLink to="/zadania">
             Zadania
-          </Link>
+          </StyledNavLink>
         </li>
         <li>
-          <Link to="/autor">
+          <StyledNavLink to="/autor">
             O autorze
-          </Link>
+          </StyledNavLink>
         </li>
       </ul>
       <Routes>
