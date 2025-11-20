@@ -20,16 +20,25 @@ export const Item = styled.li`
 
 
     ${(props) =>
-        props.hidden &&
-        css`
+    props.hidden &&
+    css`
             display: none;
         `}
 `;
 
 export const Content = styled.span`
+    a {
+            text-decoration: none; 
+            color: inherit; 
+            transition: color 0.3s; 
+        
+        &:hover {
+            color: teal; 
+        }
+      }
     ${({ $done }) =>
-        $done &&
-        css`
+    $done &&
+    css`
             text-decoration: line-through;
             display: flex;
             align-items: center;
@@ -48,8 +57,8 @@ export const Button = styled.button`
     transition: background 0.3s;
 
     ${({ $toggleDone }) =>
-        $toggleDone &&
-        css`
+    $toggleDone &&
+    css`
             background-color: hsl(122, 59%, 40%);
             display: flex;
             align-items: center;
@@ -61,8 +70,8 @@ export const Button = styled.button`
         `}
 
     ${({ $remove }) =>
-        $remove &&
-        css`
+    $remove &&
+    css`
             background-color: hsl(0, 89%, 42%);
             display: flex;
             align-items: center;
