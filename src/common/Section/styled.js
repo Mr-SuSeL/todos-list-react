@@ -13,7 +13,7 @@ export const Header = styled.div`
     padding: 10px 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
 
 
 @media (max-width: 610px) {

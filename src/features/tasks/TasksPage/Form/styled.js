@@ -2,13 +2,14 @@ import styled, { css } from "styled-components";
 
 export const StyledForm = styled.form`
   display: flex;
-  margin-top: -20px;
+  /* margin-top: -20px; */
   border: 2px solid #ddd;
   padding: 20px;
   background-color: #fff;
   font-size: 20px;
   justify-content: space-evenly;
   flex-wrap: nowrap;
+  margin-bottom: 20px;
 
   @media (max-width: 767px) {
     flex-wrap: wrap;
